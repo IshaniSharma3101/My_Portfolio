@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishani Sharma | Frontend Developer Portfolio</title>
+  <meta name="description" content="Ishani Sharma - Premium Frontend Developer Portfolio. Custom responsive navbar with interactive animations and glassmorphism styling.">
+  
+  <!-- Google Fonts: Prata (Soria-inspired), Outfit, & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Outfit:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome CDN for Modern Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ACukcUaNxQ5DKEj3W");
+   })();
+</script>
+<script src = "script.js"></script> -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script.js"></script> -->
+</head>
+<body>
+  <!-- Ambient Background System -->
+  <div class="ambient-background">
+    <!-- Grid Overlay -->
+    <div class="ambient-grid"></div>
+    <!-- Floating Glows -->
+    <div class="glow-orb orb-amber"></div>
+    <div class="glow-orb orb-blue"></div>
+    <!-- Noise Grain -->
+    <div class="ambient-noise"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar-header" id="navbar-header">
+    <nav class="navbar" aria-label="Main Navigation">
+      
+      <!-- Left Side: Hamburger Menu -->
+      <button class="hamburger-btn" id="hamburger-btn" aria-expanded="false" aria-controls="mobile-nav" aria-label="Toggle navigation menu">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+      
+      <!-- Center Side: Name Brand Logo (Soria-Inspired curves) -->
+      <div class="navbar-center">
+        <a href="#" class="navbar-logo" aria-label="Ishani Sharma Homepage">
+          Ishani Sharma
+        </a>
+      </div>
+      
+      <!-- Right Side: Navigation Action & Social Buttons (Desktop/Tablet) -->
+      <div class="navbar-right">
+        <div class="nav-links" id="desktop-nav-links">
+          <a href="#about" class="nav-item btn-outline-nav">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>About Me</span>
+          </a>
+          <a href="#contact" class="nav-item btn-hire" aria-label="Hire Me">
+            <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+            <span>Hire Me</span>
+          </a>
+        </div>
+      </div>
+      
+    </nav>
+  </header>
+
+  <!-- Mobile Sidebar Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Sliding Sidebar Menu (Site Navigation Drawer) -->
+  <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav class="mobile-nav" aria-label="Mobile Navigation">
+      <ul class="mobile-nav-list">
+        <li style="--i: 1">
+          <a href="#home" class="mobile-nav-item">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Home Page</span>
+          </a>
+        </li>
+        <li style="--i: 2">
+          <a href="#about" class="mobile-nav-item">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+            <span>About Me</span>
+          </a>
+        </li>
+        <li style="--i: 3">
+          <a href="#skills" class="mobile-nav-item">
+            <i class="fa-solid fa-laptop-code" aria-hidden="true"></i>
+            <span>My Skills</span>
+          </a>
+        </li>
+        <li style="--i: 4">
+          <a href="#projects" class="mobile-nav-item">
+            <i class="fa-solid fa-shapes" aria-hidden="true"></i>
+            <span>My Projects</span>
+          </a>
+        </li>
+        <li style="--i: 5">
+          <a href="#contact" class="mobile-nav-item">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+            <span>Contact Me</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Floating Social Sidebar (Appears on scroll) -->
+  <aside class="floating-social-bar hidden" id="floating-social-bar">
+    <a href="https://www.linkedin.com/in/ishanisharma3101" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a href="https://github.com/IshaniSharma3101" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+    <a href="mailto:ishanisharma3101@gmail.com" class="social-bubble" aria-label="Gmail"><i class="fa-regular fa-envelope"></i></a>
+    <a href="tel:+8875174498" class="social-bubble" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+    <a href="https://leetcode.com/u/Ishani_Sharma31" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+    <a href="https://www.geeksforgeeks.org/profile/b230bmfc" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="GeeksforGeeks"><i class="fa-solid fa-laptop-code"></i></a>
+    <a href="https://www.codechef.com/users/ishani31" target="_blank" rel="noopener noreferrer" class="social-bubble" aria-label="CodeChef"><i class="fa-solid fa-terminal"></i></a>
+  </aside>
+
+  <!-- Main Content Wrapper -->
+  <main class="content-wrapper">
+    
+    <!-- Hero Section -->
+    <section class="section hero" id="home">
+      
+      <!-- Hero Specific Ambient Background -->
+      <div class="hero-ambient">
+        <!-- Layer 4: Ambient Glows -->
+        <div class="hero-glow glow-tl-blue"></div>
+        <div class="hero-glow glow-br-amber"></div>
+        <div class="hero-glow glow-c-cyan"></div>
+        
+        <!-- Layers 2, 3 & 5: Tech Lines, Shapes, and Code textures -->
+        <div class="hero-particles">
+          <!-- Geometric Lines (Layer 2) -->
+          <div class="tech-line line-1"></div>
+          <div class="tech-line line-2"></div>
+          <div class="tech-line line-3"></div>
+          <div class="tech-line line-4"></div>
+          <div class="tech-line line-5"></div>
+          
+          <!-- Abstract Shapes (Layer 3) -->
+          <div class="tech-shape shape-circle" style="top: 20%; left: 15%;"></div>
+          <div class="tech-shape shape-square" style="top: 75%; left: 10%;"></div>
+          <div class="tech-shape shape-hex" style="top: 15%; right: 25%;"></div>
+          <div class="tech-shape shape-dot" style="top: 65%; right: 15%;"></div>
+          <div class="tech-shape shape-dot" style="top: 35%; right: 40%;"></div>
+          <div class="tech-shape shape-square" style="top: 85%; right: 45%;"></div>
+          
+          <!-- Code Textures (Layer 5) -->
+          <div class="code-texture" style="top: 25%; left: 8%;">const</div>
+          <div class="code-texture" style="top: 80%; left: 25%;">=&gt;</div>
+          <div class="code-texture" style="top: 15%; right: 10%;">{ }</div>
+          <div class="code-texture" style="top: 75%; right: 8%;">&lt; /&gt;</div>
+          <div class="code-texture" style="top: 45%; left: 45%;">function</div>
+        </div>
+      </div>
+      
+      <div class="container hero-container">
+        
+        <!-- Left Column: Introduction content -->
+        <div class="hero-content">
+          <span class="hero-greeting">Hello, I'm</span>
+          <h1 class="hero-name">Ishani Sharma</h1>
+          
+          <div class="hero-typing-wrapper">
+            <span class="typewriter-prefix">I am </span>
+            <span class="typewriter-text" id="typewriter-text"></span>
+            <span class="typewriter-cursor" aria-hidden="true">|</span>
+          </div>
+          
+          <p class="hero-desc">
+           Full Stack Developer | Java Programmer | MERN Stack Enthusiast 
+           <br>
+Passionate about creating responsive web experiences, solving real-world problems through code, and continuously learning new technologies. Exploring AI tools, modern development practices, and innovative solutions while bringing creativity and an artistic mindset into every project.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="https://drive.google.com/file/d/1qP6lLH2UE38dRXUekcuJ9MHUgwA-hLqd/view?usp=sharing" target="_blank" class="btn btn-resume-premium" aria-label="View Ishani Sharma's Resume" title="View My Resume">
+              <i class="fa-solid fa-eye" aria-hidden="true"></i> <span>View Resume</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fa-regular fa-envelope" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+        </div>
+        
+        <!-- Right Column: Profile Image Visual Attraction -->
+        <div class="hero-image-area">
+          
+          <!-- Floating Tech Elements (Safely positioned to float around the card, never overlapping the face) -->
+          <div class="floating-tech" style="--d: 0s; --x: -30px; --y: 30px;">
+            <i class="fa-brands fa-react" style="color: #61dafb;" aria-hidden="true"></i> React
+          </div>
+          <div class="floating-tech" style="--d: 1.5s; --x: 360px; --y: 20px;">
+            <i class="fa-brands fa-node-js" style="color: #68a063;" aria-hidden="true"></i> Node
+          </div>
+          <div class="floating-tech" style="--d: 3.0s; --x: -60px; --y: 190px;">
+            <i class="fa-solid fa-leaf" style="color: #4db33d;" aria-hidden="true"></i> MongoDB
+          </div>
+          <div class="floating-tech" style="--d: 0.8s; --x: 400px; --y: 180px;">
+            <i class="fa-solid fa-server" style="color: #b1b1b1;" aria-hidden="true"></i> Express
+          </div>
+          <div class="floating-tech" style="--d: 2.2s; --x: -40px; --y: 320px;">
+            <i class="fa-brands fa-java" style="color: #e76f51;" aria-hidden="true"></i> Java
+          </div>
+          <div class="floating-tech" style="--d: 1.8s; --x: 370px; --y: 340px;">
+            <i class="fa-brands fa-square-js" style="color: #f7df1e;" aria-hidden="true"></i> JavaScript
+          </div>
+          <div class="floating-tech" style="--d: 0.5s; --x: 140px; --y: -35px;">
+            <i class="fa-solid fa-code" style="color: #e5c158;" aria-hidden="true"></i> &lt; /&gt;
+          </div>
+          <div class="floating-tech" style="--d: 2.5s; --x: 120px; --y: 410px;">
+            <i class="fa-solid fa-bolt" style="color: #ffb703;" aria-hidden="true"></i> Solving
+          </div>
+          
+          <!-- Subtle Glowing Particles -->
+          <div class="particle" style="--t: 15%; --l: 10%; --d: 0s;"></div>
+          <div class="particle" style="--t: 20%; --l: 90%; --d: 1.2s;"></div>
+          <div class="particle" style="--t: 78%; --l: 5%; --d: 0.6s;"></div>
+          <div class="particle" style="--t: 82%; --l: 85%; --d: 2.1s;"></div>
+          
+          <!-- Glassmorphic Container Card -->
+          <div class="hero-image-wrapper">
+            <!-- Animated Gradient Energy Ring -->
+            <div class="energy-ring"></div>
+            
+            <!-- Profile Image Frame -->
+            <div class="profile-image-container">
+              <!-- Profile Photo (will auto-rotate and crop vertically in CSS) -->
+              <img src="./Images/profile.jpg" alt="Ishani Sharma Profile Picture">
+              
+              <!-- Vignette Blending Overlay -->
+              <div class="profile-blend-overlay"></div>
+              
+              <!-- Futuristic Pixel-Art Sub-pixel Grid -->
+              <div class="pixel-overlay"></div>
+              
+              <!-- Digital Scanning line -->
+              <div class="scan-line"></div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="about-grid-premium">
+          <!-- Left Column: Main About Content -->
+          <div class="about-content-card scroll-reveal fade-up">
+            <h2 class="card-title">About Me</h2>
+            <div class="reading-text-container" id="reading-text-container">
+              <p class="bio-text">
+                I am a dedicated Full Stack Developer and an eager MERN Stack Learner with a strong foundation as a Java Programmer. As a passionate DSA Enthusiast and a natural Problem Solver, I thrive on tackling complex algorithmic challenges and architecting scalable backend systems. I am also an AI Tools Explorer, constantly integrating cutting-edge technology into my engineering workflow. Being an adaptable Tech Learner, my expertise seamlessly spans both Frontend Development and Backend Development. I consider myself a Creative Thinker with an Artistic Mindset, bridging the crucial gap between elegant, intuitive design and robust, high-performance engineering. Through my dedication to Continuous Learning and my hands-on approach to Building Real Projects, I channel my deep Passion for Technology into creating premium, user-centric software solutions that make a lasting impact.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Right Column: Profile Card -->
+          <div class="about-profile-card scroll-reveal slide-up">
+            <div class="card-inner">
+              <div class="card-img-wrapper">
+                <img src="./Images/ishani.jpeg" alt="Ishani Sharma">
+              </div>
+              <h3 class="card-name">ISHANI SHARMA</h3>
+              <p class="card-role">Full Stack Developer</p>
+              <div class="card-divider"></div>
+              <div class="card-contact">
+                <a href="mailto:ishanisharma3101@gmail.com" class="contact-row"><i class="fa-regular fa-envelope"></i> ishanisharma3101@gmail.com</a>
+                <a href="tel:8875174498" class="contact-row"><i class="fa-solid fa-phone"></i>8875174498</a>
+                <div class="contact-row"><i class="fa-solid fa-location-dot"></i> Rajasthan, India</div>
+              </div>
+              <a href="ishani_resume.pdf" download class="btn btn-outline btn-resume">
+                <i class="fa-solid fa-download"></i> Download Resume
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Education Card (Continuation of About Section) -->
+      <div class="container" style="margin-top: 40px;">
+        <div class="education-card scroll-reveal fade-up">
+          <div class="edu-accent"></div>
+          <div class="edu-content">
+            <h2 class="edu-main-title">Education</h2>
+            <div class="edu-timeline">
+              
+              <!-- B.Tech -->
+              <div class="edu-item">
+                <div class="edu-item-header">
+                  <h3 class="edu-degree">🎓 B.Tech - Information Technology </h3>
+                  <span class="edu-year">Expected: 2027</span>
+                </div>
+                <p class="edu-college">Swami Keshvanand Institute of Technology, Management & Gramothan, Jaipur(Raj.)</p>
+                <p class="edu-score" >8.5 CGPA ( till 5th sem) </p>
+              </div>
+              
+              <!-- 12th -->
+              <div class="edu-item">
+                <div class="edu-item-header">
+                  <h3 class="edu-degree">📚 Class 12th CBSE </h3>
+                  <span class="edu-year">Completed: 2022</span>
+                </div>
+                <p class="edu-college">Childrens Acadmey Convent School , Alwar(Raj.)</p>
+                <p class="edu-score">90.2 % </p>
+              </div>
+              
+              <!-- 10th -->
+              <div class="edu-item">
+                <div class="edu-item-header">
+                  <h3 class="edu-degree">📖 Class 10th CBSE </h3>
+                  <span class="edu-year">Completed: 2020</span>
+                </div>
+                <p class="edu-college">Adinath Public School, Alwar(Raj.)</p>
+                <p class="edu-score">95.6 % </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Marquee Section -->
+    <section class="section tech-marquee-section" id="technologies">
+      <div class="projects-grid-bg"></div> <!-- Grid Background consistency -->
+      <div class="container relative-z">
+        <div class="marquee-header scroll-reveal fade-up">
+          <!-- <h2 class="section-title">My Tech Arsenal</h2> -->
+          <!-- <p class="contact-subtitle" style="margin-bottom: 40px;">Building modern digital experiences with these technologies.</p> -->
+        </div>
+      </div>
+      
+      <!-- Infinite Marquee Container -->
+      <div class="marquee-container scroll-reveal slide-up">
+        <!-- Mask for fading edges -->
+        <div class="marquee-mask">
+          <div class="marquee-track">
+            <!-- First set of logos -->
+            <div class="marquee-content">
+              <div class="tech-card"><i class="fa-brands fa-java" style="color: #e76f51;"></i><span>Java</span></div>
+              <div class="tech-card"><i class="fa-brands fa-html5" style="color: #e34f26;"></i><span>HTML5</span></div>
+              <div class="tech-card"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i><span>CSS3</span></div>
+              <div class="tech-card"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+              <div class="tech-card"><i class="fa-brands fa-react" style="color: #61dafb;"></i><span>React</span></div>
+              <div class="tech-card"><i class="fa-brands fa-node-js" style="color: #68a063;"></i><span>Node.js</span></div>
+              <div class="tech-card"><i class="fa-solid fa-server" style="color: #b1b1b1;"></i><span>Express.js</span></div>
+              <div class="tech-card"><i class="fa-solid fa-leaf" style="color: #4db33d;"></i><span>MongoDB</span></div>
+              <div class="tech-card"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span></div>
+              <div class="tech-card"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i><span>Git</span></div>
+              <div class="tech-card"><i class="fa-brands fa-github" style="color: #ffffff;"></i><span>GitHub</span></div>
+              <div class="tech-card"><i class="fa-brands fa-aws" style="color: #ff9900;"></i><span>AWS</span></div>
+              <div class="tech-card"><i class="fa-solid fa-code" style="color: #007acc;"></i><span>VS Code</span></div>
+              <div class="tech-card"><i class="fa-brands fa-linux" style="color: #f5be04;"></i><span>Linux</span></div>
+              <div class="tech-card"><i class="fa-solid fa-network-wired" style="color: #48CAE4;"></i><span>REST API</span></div>
+              <div class="tech-card"><i class="fa-solid fa-robot" style="color: #10a37f;"></i><span>ChatGPT</span></div>
+              <div class="tech-card"><i class="fa-solid fa-sparkle" style="color: #4285f4;"></i><span>Gemini</span></div>
+              <div class="tech-card"><i class="fa-solid fa-wand-magic-sparkles" style="color: #a020f0;"></i><span>Cursor AI</span></div>
+              <div class="tech-card"><i class="fa-solid fa-code" style="color: #ffa116;"></i><span>LeetCode</span></div>
+              <div class="tech-card"><i class="fa-solid fa-book" style="color: #2f8d46;"></i><span>GeeksforGeeks</span></div>
+              <div class="tech-card"><i class="fa-solid fa-utensils" style="color: #5b4638;"></i><span>CodeChef</span></div>
+            </div>
+            
+            <!-- Duplicated set for seamless loop -->
+            <div class="marquee-content" aria-hidden="true">
+              <div class="tech-card"><i class="fa-brands fa-java" style="color: #e76f51;"></i><span>Java</span></div>
+              <div class="tech-card"><i class="fa-brands fa-html5" style="color: #e34f26;"></i><span>HTML5</span></div>
+              <div class="tech-card"><i class="fa-brands fa-css3-alt" style="color: #1572b6;"></i><span>CSS3</span></div>
+              <div class="tech-card"><i class="fa-brands fa-js" style="color: #f7df1e;"></i><span>JavaScript</span></div>
+              <div class="tech-card"><i class="fa-brands fa-react" style="color: #61dafb;"></i><span>React</span></div>
+              <div class="tech-card"><i class="fa-brands fa-node-js" style="color: #68a063;"></i><span>Node.js</span></div>
+              <div class="tech-card"><i class="fa-solid fa-server" style="color: #b1b1b1;"></i><span>Express.js</span></div>
+              <div class="tech-card"><i class="fa-solid fa-leaf" style="color: #4db33d;"></i><span>MongoDB</span></div>
+              <div class="tech-card"><i class="fa-solid fa-database" style="color: #00758f;"></i><span>MySQL</span></div>
+              <div class="tech-card"><i class="fa-brands fa-git-alt" style="color: #f05032;"></i><span>Git</span></div>
+              <div class="tech-card"><i class="fa-brands fa-github" style="color: #ffffff;"></i><span>GitHub</span></div>
+              <div class="tech-card"><i class="fa-brands fa-aws" style="color: #ff9900;"></i><span>AWS</span></div>
+              <div class="tech-card"><i class="fa-solid fa-code" style="color: #007acc;"></i><span>VS Code</span></div>
+              <div class="tech-card"><i class="fa-brands fa-linux" style="color: #f5be04;"></i><span>Linux</span></div>
+              <div class="tech-card"><i class="fa-solid fa-network-wired" style="color: #48CAE4;"></i><span>REST API</span></div>
+              <div class="tech-card"><i class="fa-solid fa-robot" style="color: #10a37f;"></i><span>ChatGPT</span></div>
+              <div class="tech-card"><i class="fa-solid fa-sparkle" style="color: #4285f4;"></i><span>Gemini</span></div>
+              <div class="tech-card"><i class="fa-solid fa-wand-magic-sparkles" style="color: #a020f0;"></i><span>Cursor AI</span></div>
+              <div class="tech-card"><i class="fa-solid fa-code" style="color: #ffa116;"></i><span>LeetCode</span></div>
+              <div class="tech-card"><i class="fa-solid fa-book" style="color: #2f8d46;"></i><span>GeeksforGeeks</span></div>
+              <div class="tech-card"><i class="fa-solid fa-utensils" style="color: #5b4638;"></i><span>CodeChef</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Skills Section -->
+    <section class="section skills-premium" id="skills">
+      <div class="skills-grid-bg"></div> <!-- Grid Background -->
+      <div class="container relative-z">
+        <div class="skills-header scroll-reveal fade-up">
+          <h2 class="section-title">What I Know</h2>
+          <p class="skills-subtitle">A professional summary introducing my technical focus spanning Full Stack Development, MERN Stack, Java, AI Tools, and continuous Problem Solving.</p>
+        </div>
+        
+        <div class="skills-masonry">
+          
+          <!-- Category 1 -->
+          <div class="skill-category scroll-reveal slide-up">
+            <h3 class="category-title">Programming language</h3>
+            <div class="chip-container">
+              <span class="skill-chip">Java</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">SQL</span>
+            </div>
+          </div>
+          
+          <!-- Category 2 -->
+          <div class="skill-category scroll-reveal slide-up" style="transition-delay: 0.1s;">
+            <h3 class="category-title">Frontend</h3>
+            <div class="chip-container">
+              <span class="skill-chip">HTML5</span>
+              <span class="skill-chip">CSS3</span>
+              <span class="skill-chip">JavaScript</span>
+              <span class="skill-chip">React.js</span>
+              <span class="skill-chip">Responsive Design</span>
+            </div>
+          </div>
+          
+          <!-- Category 3 -->
+          <div class="skill-category scroll-reveal slide-up" style="transition-delay: 0.2s;">
+            <h3 class="category-title">Backend</h3>
+            <div class="chip-container">
+              <span class="skill-chip">Node.js</span>
+              <span class="skill-chip">Express.js</span>
+              <span class="skill-chip">REST APIs</span>
+              <span class="skill-chip">Authentication</span>
+            </div>
+          </div>
+
+
+
+          <!-- Category 7 -->
+          <div class="skill-category scroll-reveal slide-up">
+            <h3 class="category-title">AI & Productivity</h3>
+            <div class="chip-container">
+              <span class="skill-chip">ChatGPT</span>
+              <span class="skill-chip">Claude</span>
+              <span class="skill-chip">Gemini</span>
+              <span class="skill-chip">Cursor AI</span>
+              <span class="skill-chip">Antigravity</span>
+              <span class="skill-chip">Prompt Engineering</span>
+            </div>
+          </div>
+          
+
+          <!-- Category 6 -->
+          <div class="skill-category scroll-reveal slide-up" style="transition-delay: 0.2s;">
+            <h3 class="category-title">Core CS</h3>
+            <div class="chip-container">
+              <span class="skill-chip">Data Structures</span>
+              <span class="skill-chip">Algorithms</span>
+              <span class="skill-chip">OOP</span>
+              <span class="skill-chip">DBMS</span>
+              <span class="skill-chip">Operating Systems</span>
+              <span class="skill-chip">Computer Networks</span>
+            </div>
+          </div>
+          <!-- Category 4 -->
+          <div class="skill-category scroll-reveal slide-up">
+            <h3 class="category-title">Databases</h3>
+            <div class="chip-container">
+              <span class="skill-chip">MongoDB</span>
+              <span class="skill-chip">MySQL</span>
+            </div>
+          </div>
+          
+          <!-- Category 5 -->
+          <div class="skill-category scroll-reveal slide-up" style="transition-delay: 0.1s;">
+            <h3 class="category-title">Version Control</h3>
+            <div class="chip-container">
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Category 5
+          <div class="skill-category scroll-reveal slide-up" style="transition-delay: 0.1s;">
+            <h3 class="category-title">Tools</h3>
+            <div class="chip-container">
+              <span class="skill-chip">VS-Code</span>
+              <span class="skill-chip">Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+
+
+
+    <!-- Projects Section -->
+    <section class="section projects-premium" id="projects">
+      <div class="projects-grid-bg"></div> <!-- Grid Background consistent with Skills -->
+      <div class="container relative-z">
+        
+        <div class="projects-header scroll-reveal fade-up">
+          <h2 class="section-title"> My Projects </h2>
+          <p class="projects-subtitle">A collection of projects showcasing my skills in Full Stack Development, Java Programming, MERN Stack, Cloud Technologies, and Problem Solving.</p>
+        </div>
+        
+        <!-- Filter Buttons -->
+        <div class="project-filters scroll-reveal fade-up" style="transition-delay: 0.1s;">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <!-- <button class="filter-btn" data-filter="java">Java</button> -->
+          <!-- <button class="filter-btn" data-filter="cloud">Cloud</button>
+          <button class="filter-btn" data-filter="ai">AI</button> -->
+        </div>
+        
+        <!-- Projects Grid -->
+        <div class="projects-grid-modern">
+          
+          <!-- Project 1 -->
+          <div class="project-card-modern scroll-reveal slide-up" data-category="frontend">
+            <div class="project-img-wrapper">
+              <img src="./Images/portfolio_img.png" alt="My Portfolio Website" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">My Portfolio Website</h3>
+              <p class="project-desc">A premium, highly interactive personal portfolio designed HTML5, CSS, Javascript , vanilla CSS  and modern UI principles.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS & Vanilla CSS</span>
+                <span class="tech-pill">JavaScript</span>
+              </div>
+              
+              <ul class="project-features">
+                <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                <li><i class="fa-solid fa-check"></i> Scroll Animations</li>
+                <li><i class="fa-solid fa-check"></i> Responsive UI</li>
+
+              </ul>
+              
+              <div class="project-actions">
+                <a href="#" target="_blank" class="btn-action btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" class="btn-action btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Project 2 -->
+          <div class="project-card-modern scroll-reveal slide-up" style="transition-delay: 0.1s;" data-category="fullstack">
+            <div class="project-img-wrapper">
+              <!-- <img src="https://via.placeholder.com/600x400/121212/FFFFFF?text=Netflix+Analytics" alt="E-Commerce Website" class="project-img"> -->
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">E-Commerce Website</h3>
+              <p class="project-desc">A feature-rich e-commerce platform with a modern UI, secure payment integration, and seamless user experience.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tech-pill">MERN Stack</span>
+                <!-- <span class="tech-pill">Python</span>
+                <span class="tech-pill">SQL</span> -->
+              </div>
+              
+              <ul class="project-features">
+                <li><i class="fa-solid fa-check"></i> Authentication (JWT)</li>
+                <li><i class="fa-solid fa-check"></i> CRUD Operations</li>
+                <li><i class="fa-solid fa-check"></i> Responsive Dashboard</li>
+              </ul>
+              
+              <div class="project-actions">
+                <a href="#" target="_blank" class="btn-action btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" class="btn-action btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <!-- <div class="project-card-modern scroll-reveal slide-up" style="transition-delay: 0.2s;" data-category="frontend">
+            <div class="project-img-wrapper">
+              <img src="https://via.placeholder.com/600x400/121212/FFFFFF?text=Weather+App" alt="Weather Forecast App" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Weather Forecast App</h3>
+              <p class="project-desc">An elegant and responsive weather dashboard integrating real-time weather APIs for accurate global forecasts.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">REST API</span>
+              </div>
+              
+              <ul class="project-features">
+                <li><i class="fa-solid fa-check"></i> Real-time API integration</li>
+                <li><i class="fa-solid fa-check"></i> Geolocation</li>
+                <li><i class="fa-solid fa-check"></i> Dynamic UI updates</li>
+              </ul>
+              
+              <div class="project-actions">
+                <a href="#" target="_blank" class="btn-action btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" class="btn-action btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Project 4 -->
+          <!-- <div class="project-card-modern scroll-reveal slide-up" data-category="fullstack">
+            <div class="project-img-wrapper">
+              <img src="https://via.placeholder.com/600x400/121212/FFFFFF?text=Task+Manager" alt="Task Management App" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Task Management App</h3>
+              <p class="project-desc">A comprehensive productivity tool allowing users to track progress, manage daily tasks, and collaborate.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">Node.js</span>
+                <span class="tech-pill">MongoDB</span>
+              </div>
+              
+              <ul class="project-features">
+                <li><i class="fa-solid fa-check"></i> Authentication (JWT)</li>
+                <li><i class="fa-solid fa-check"></i> CRUD Operations</li>
+                <li><i class="fa-solid fa-check"></i> Responsive Dashboard</li>
+              </ul>
+              
+              <div class="project-actions">
+                <a href="#" target="_blank" class="btn-action btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" class="btn-action btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Project 5 -->
+          <!-- <div class="project-card-modern scroll-reveal slide-up" style="transition-delay: 0.1s;" data-category="java">
+            <div class="project-img-wrapper">
+              <img src="https://via.placeholder.com/600x400/121212/FFFFFF?text=Java+Quiz+App" alt="Java Quiz Application" class="project-img">
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Java Quiz Application</h3>
+              <p class="project-desc">A robust desktop application built to conduct timed assessments with an integrated scoring engine.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tech-pill">Java</span>
+                <span class="tech-pill">Swing</span>
+                <span class="tech-pill">MySQL</span>
+              </div>
+              
+              <ul class="project-features">
+                <li><i class="fa-solid fa-check"></i> Object-Oriented Design</li>
+                <li><i class="fa-solid fa-check"></i> Database Integration</li>
+                <li><i class="fa-solid fa-check"></i> Timed Assessments</li>
+              </ul>
+              
+              <div class="project-actions">
+                <a href="#" target="_blank" class="btn-action btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" class="btn-action btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Project 6 -->
+          <div class="project-card-modern scroll-reveal slide-up" style="transition-delay: 0.2s;" data-category="fullstack">
+            <div class="project-img-wrapper">
+              <!-- <img src="https://via.placeholder.com/600x400/121212/FFFFFF?text=E-Commerce" alt="Placement-Prep Hub" class="project-img"> -->
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Placement-Prep Hub</h3>
+              <p class="project-desc">A fully functional digital platform where student from tier3 and with low guidance can actually track their placement prep and take personalised guidance and AI-based consultancy.</p>
+              
+              <div class="project-tech-stack">
+                <span class="tech-pill">MERN Stack</span>
+                <!-- <span class="tech-pill">Stripe API</span> -->
+                <!-- <span class="tech-pill">Redux</span> -->
+              </div>
+              
+              <ul class="project-features">
+                 <li><i class="fa-solid fa-check"></i> Responsive Design</li>
+                <!-- <li><i class="fa-solid fa-check"></i> Scroll Animations</li> -->
+                <li><i class="fa-solid fa-check"></i> Responsive UI</li>
+
+              </ul>
+              
+              <div class="project-actions">
+                <a href="#" target="_blank" class="btn-action btn-github"><i class="fa-brands fa-github"></i> Code</a>
+                <a href="#" target="_blank" class="btn-action btn-demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-premium" id="contact">
+      <div class="projects-grid-bg"></div> <!-- Keep background consistent -->
+      <div class="container relative-z">
+        
+        <div class="contact-header scroll-reveal fade-up">
+          <h2 class="section-title">Let's Connect</h2>
+          <p class="contact-subtitle">Whether you have a project idea, internship opportunity, collaboration proposal, freelance work, or simply want to connect, feel free to reach out.<br>I am always open to discussing technology, development, cloud computing, AI tools, and exciting opportunities.</p>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- LEFT SIDE: Contact Card -->
+          <div class="contact-info-card scroll-reveal slide-up">
+            <h3 class="contact-card-title">Get In Touch</h3>
+            <p class="contact-card-intro">I enjoy connecting with developers, recruiters, creators, and technology enthusiasts. Feel free to reach out through any platform.</p>
+            
+            <div class="contact-list">
+              <a href="mailto:ishanisharma3101@gmail.com" class="contact-list-item">
+                <div class="contact-icon-box"><i class="fa-regular fa-envelope"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">Email</span>
+                  <span class="contact-value">ishanisharma3101@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:8875174498" class="contact-list-item">
+                <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">Phone</span>
+                  <span class="contact-value">+8875174498</span>
+                </div>
+              </a>
+              <div class="contact-list-item">
+                <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-text">
+                  <span class="contact-label">Location</span>
+                  <span class="contact-value">Rajasthan, India</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-socials">
+              <a href="https://www.linkedin.com/in/ishanisharma3101/" target="_blank" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="https://github.com/IshaniSharma3101" target="_blank" class="social-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://leetcode.com/u/Ishani_Sharma31/" target="_blank" class="social-circle" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+              <a href="https://www.geeksforgeeks.org/profile/b230bmfc" target="_blank" class="social-circle" aria-label="GeeksforGeeks"><i class="fa-solid fa-book"></i></a>
+              <a href="https://www.codechef.com/users/ishani31" target="_blank" class="social-circle" aria-label="CodeChef"><i class="fa-solid fa-utensils"></i></a>
+            </div>
+
+            <div class="availability-status">
+              <div class="status-indicator"></div>
+              <div class="status-content">
+                <span class="status-title">Available for:</span>
+                <ul class="status-list">
+                  <li>Internships</li>
+                  <li>Freelance Projects</li>
+                  <li>Collaborations</li>
+                  <li>Learning Opportunities</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE: Message Form -->
+          <div class="contact-form-card scroll-reveal slide-up" style="transition-delay: 0.1s;">
+            <h3 class="contact-card-title">Send Me a Message</h3>
+            <p class="contact-card-intro">Have something in mind? Let's talk.</p>
+            
+            <form id="contact-form" class="modern-form">
+              <div class="form-group">
+                <label for="user_name">Full Name</label>
+                <input type="text" id="user_name" name="user_name" placeholder="abc" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="user_email">Email Address</label>
+                <input type="email" id="user_email" name="user_email" placeholder="abc@example.com" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Project Idea / Internship Opportunity" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Hi Ishani, I'd like to discuss..." required></textarea>
+              </div>
+              
+              <button type="submit" class="btn-submit-modern">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              
+              <div id="form-status" class="form-status-msg"></div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Ishani Sharma. Designed & Built with Precision.</p>
+    </div>
+  </footer>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <!-- Vanilla JS Script -->
+  <script src="script.js"></script>
+</body>
+</html>
